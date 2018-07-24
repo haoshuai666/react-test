@@ -3,6 +3,7 @@ import './App.css';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 
 import BaseTable from './compents/base/BaseTable.jsx'
+import OperationBar from './compents/base/OperationBar.jsx'
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
@@ -42,14 +43,10 @@ class App extends Component {
             </Menu>
           </Sider>
           <Layout style={{ padding: '0 24px 24px' }}>
-            <Breadcrumb style={{ margin: '16px 0' }}>
-              <Breadcrumb.Item>Home</Breadcrumb.Item>
-              <Breadcrumb.Item>List</Breadcrumb.Item>
-              <Breadcrumb.Item>App</Breadcrumb.Item>
-            </Breadcrumb>
-            <Content style={{ background: '#fff', padding: 0, margin: 0, minHeight: 480 }}>
+           <OperationBar></OperationBar>
+            <Content style={{ background: '#fff', padding: 0, marginTop: 16, minHeight: 480 }}>
               <BaseTable></BaseTable>
-        </Content>
+            </Content>
           </Layout>
         </Layout>
       </Layout>

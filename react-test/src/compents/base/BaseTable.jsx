@@ -1,9 +1,7 @@
-import { Table } from 'antd';
+import { Table,Button} from 'antd';
 import React, { Component } from 'react';
-import { Button, Menu, Icon } from 'antd';
 import Model from './HomeFirstEdit.jsx'
-
-const ButtonGroup = Button.Group;
+//import FormOption from './FormOption.jsx'
 const columns = [{
     title: '序号',
     dataIndex: 'key',
@@ -26,18 +24,16 @@ const columns = [{
 },{
     title: '上架时间',
     dataIndex: 'age',
-},{
+},{		
     title: '操作',
     dataIndex: 'age',
     render(){
         return(
-    <div>
-    <ButtonGroup>
-        <Button type="primary" size="small">上架</Button>
-        <Button type="danger" size="small">下架</Button>
-    </ButtonGroup> 
-        <Model ></Model>
-    </div>
+            <div>
+            <Button type="primary" size="small">上架</Button>
+            <Button type="danger" size="small" onClick={handleDown}>下架</Button>
+            <Model></Model>
+            </div>
         )
     }
 },];
@@ -74,21 +70,14 @@ const rowSelection = {
         name: record.name,
     }),
 };
-
- class BaseTable extends Component {
+function handleDown() {
+  console.log("6666");
+}
+class BaseTable extends Component {
    constructor(props) {
      super(props)
    }
-   state = {
-    loading: false,
-    iconLoading: false,
-    StsteText:'您已经下架'
-  }
-    handleDown =() => {
-        
-       this.setState({ StsteText: 'success' })
-    //this.setState({ loading: true });
-  }
+  
     render(){
             return(
                 <Table rowSelection={rowSelection} columns={columns} dataSource={data} />
