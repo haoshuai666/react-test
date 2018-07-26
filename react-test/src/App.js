@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 
-import BaseTable from './compents/base/BaseTable.jsx'
-import OperationBar from './compents/base/OperationBar.jsx'
+import BaseTable from './views/Home/BaseTable.jsx'
+//import OperationBar from './views/Home/OperationBar.jsx'
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
@@ -43,7 +43,7 @@ class App extends Component {
             </Menu>
           </Sider>
           <Layout style={{ padding: '0 24px 24px' }}>
-           <OperationBar></OperationBar>
+          {/* <OperationBar></OperationBar>*/}
             <Content style={{ background: '#fff', padding: 0, marginTop: 16, minHeight: 480 }}>
               <BaseTable></BaseTable>
             </Content>
