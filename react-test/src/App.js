@@ -3,6 +3,7 @@ import './App.css';
 import { Layout, Menu, Breadcrumb, Icon } from 'antd';
 
 import BaseTable from './views/Home/BaseTable.jsx'
+import HomeTab from './views/Home/HomeTab.jsx'
 //import OperationBar from './views/Home/OperationBar.jsx'
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
@@ -45,7 +46,7 @@ class App extends Component {
           <Layout style={{ padding: '0 24px 24px' }}>
           {/* <OperationBar></OperationBar>*/}
             <Content style={{ background: '#fff', padding: 0, marginTop: 16, minHeight: 480 }}>
-              <BaseTable></BaseTable>
+              <HomeTab></HomeTab>
             </Content>
           </Layout>
         </Layout>
